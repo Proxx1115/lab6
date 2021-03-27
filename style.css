@@ -262,7 +262,7 @@ body{
     height: 49vh;
     width: 49vw;
 }
-.fut-text >div{
+.fut-text article{
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -272,12 +272,12 @@ body{
     text-align: center;
     align-items: center;
 }
-.fut-text >div h1{
+.fut-text article h1{
     font-size: 5rem;
     color: #fff;
     font-family: 'New Tegomin', serif;
 }
-.fut-text >div p{
+.fut-text article p{
     font-size: 2rem ;
     color: #fff;
     font-family: 'New Tegomin', serif;
