@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.4;
+    background: #333;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.p-color{
+    color: #557A95;
+    transform: scale(1);
+}
+#showcase{
+    background:rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: relative;
+    height: 100vh;
+ }
+#showcase ::before{
+    content: '';
+    background: url('./img/pexels-clem-onojeghuo-175771.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+#showcase .head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+#showcase .head h1{
+    font-size: 5rem;
+    color: #fff;
+    padding: 1.5rem;
+    border-bottom: 2px solid #376a8f;
+}
+#showcase .head p{
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    
+}
+#showcase .head a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 3rem;
+}
+.con{
+    display: flex;
+    height: 500px;
+}
+.con div{
+    flex: 1;
+}
+.con .text a{
+    text-decoration: none;
+}
+.con .image{
+    background: url('./img/pexels-pixabay-373543.jpg')no-repeat center center/cover;
+}
+.con .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:rgba(3, 3, 3, 0.6);
+    color: #fff;
+    position: relative;
+}
+.con .text h1{
+    margin-bottom: 2rem;
+    font-size: 3rem; 
+}
+.con .text p{
+    padding: 0 1rem;
+    color: #196499;
+    font-size: 1.5rem;
+}
+.con .text::before{
+    content: '';
+    background: url('./img/pexels-pixabay-247676.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.con .image h1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: black;
+    font-size: 4rem;
+}
+
+.con2{
+    background: #333;
+}
+.con2 .imgtext{
+    position: relative;
+    display: flex;
+    width: 100vw;
+}
+.con2 .phototext{
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #557A95;
+    position: relative;
+}
+.con2 .imgtext div img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 220px;
+}
+.con2 .imgtext div{
+    flex: 1;
+}
+.con2 .phototext p{
+    font-size: 1.5rem;
+}
+.btn{
+    background: #376a8f;
+    padding: 0.5rem 1rem;
+    color: #111;
+    border-radius: 5px;   
+    border-color: none;    
+    margin: 1rem;
+    transition: background 0.4s ease-in;
+}
+.btn:hover{
+    background: #557A95;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.menu .toggler{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+.menu .hamburger{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.menu .hamburger >div{
+    position: relative;
+    width: 100%;
+    background: #fff;
+    height: 2px;
+    transition: all 0.3 ease-in;
+    z-index: 1;
+}
+.menu .toggler:hover + .hamburger>div{
+    transform: rotate(180deg);
+    transition: transform 0.4s ease-in;
+}
+.menu .menu-item >div >div ul li{
+    list-style: none;
+}
+.menu .hamburger >div::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+.menu .hamburger >div::after{
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+.menu .menu-item{
+    visibility: hidden;
+}
+.menu .menu-item ul li a{
+    text-decoration: none;
+    transition: background 0.5s ease-in;
+}
+.menu input:checked ~ .menu-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    transition: background 0.5s ease-in;
+    
+}
+.menu input:checked ~ .menu-item ul li a:hover{
+    background:#557A95;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+.menu .menu-item ul li a{
+    color: #fff;
+    font-size: 3rem;
+}
+.menu .menu-item  ul li{
+    padding: 1rem;
+}
+.menu .menu-item{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+#fut-case .cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    height: 100vh;
+}
+#fut-case .cont div{
+    display: flex;
+}
+#fut-case .cont div img{
+    height: 49vh;
+    width: 49vw;
+}
+.fut-text >div{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.fut-text >div h1{
+    font-size: 5rem;
+    color: #fff;
+    font-family: 'New Tegomin', serif;
+}
+.fut-text >div p{
+    font-size: 2rem ;
+    color: #fff;
+    font-family: 'New Tegomin', serif;
+}
+#tech-text .main-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+}
+.tech-img{
+    display: flex;
+    padding: 1rem 0;
+    margin-bottom: 4rem;
+}
+.tech-img div{
+    flex: 1;
+} 
+.tech-img div img{
+    height: 50vh;
+    width: 50vw;
+}
+#tech-text .main-text h1{
+    font-size: 3rem;
+    margin: 1rem;
+    padding: 1rem;
+    text-shadow: 5px 5px 0.4rem black;
+}
+#tech-text .main-text p{
+    margin-bottom: 1.3rem;
+    border-bottom: 2px solid #196499;
+    font-size: 1.1rem;
+    
+}
+#main-footer{
+    background: rgb(29, 29, 29);
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
